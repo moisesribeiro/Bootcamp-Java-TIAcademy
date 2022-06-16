@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		
+		 String categoria;
+		
+		 System.out.printf("\nInforme a categoria do %dº produto: ", contador);
+		 Scanner scan = new Scanner(System.in);
+         categoria = scan.next().toUpperCase();
+		
+	}
+
+}
