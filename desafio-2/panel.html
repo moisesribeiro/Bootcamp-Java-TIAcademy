@@ -11,12 +11,41 @@
     <title>Panel - FlashJS</title>
 </head>
 <body>
-    <div class="painel">
+<div class="painel-nav">
+    <div class="painel-menu">
     <ul class="flex-container column">
         <li class="flex-item"><a class="flex-menu" href="#"><span class="material-symbols-outlined icones">group_add</span>Clientes</a></li>
         <li class="flex-item"><a class="flex-menu" href="#"><span class="material-symbols-outlined icones">shopping_bag</span>Produtos</a></li>
         <li class="flex-item"><a class="flex-menu" href="#"><span class="material-symbols-outlined icones">shopping_cart</span>Pedidos</a></li>
     </ul>
     </div>
+    <div class="painel-formulario">
+        <section class="box-form" id="clientes">
+            <div class="title d-flex space-between flex-y-start">
+                <h1>Clientes</h1>
+                <span>X</span>
+            </div>
+            <form class="d-flex flex-column">
+                <label for="codigoCliente">Código</label>
+                <input type="text" name="codCliente" id="codigoCliente" disabled>
+                <label for="nomeCliente">Nome</label>
+                <input type="text" name="nomeCliente" data-txt="Nome" id="nomeCliente" autocomplete="off" disabled>
+                <label for="dataCadastroCliente">Data Cadastro</label>
+                <input type="date" name="dataCadCli" id="dataCadastroCliente" disabled>
+
+                <div class="buttons">
+                    <div class="voltarEavancar d-flex">
+                        <button type="button" class="btn-arow btnVoltar"> < </button>
+                        <button type="button" class="btn-arow btnAvancar"> > </button>
+                    </div>
+
+                    <div class="novoEsalvar d-flex">
+                        <button type="button" class="btnNovo">Novo</button>
+                        <button type="submit" class="btnSalvar">Salvar</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
 </body>
 </html>

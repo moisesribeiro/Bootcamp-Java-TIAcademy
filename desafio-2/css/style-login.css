@@ -47,3 +47,8 @@ input[type="password"] {
     align-items: center;
     margin-bottom: 5px;
 }
+.acesso:hover{
+    width: 100%;
+    background-color: rgb(1, 187, 1);
+    color: #fff;
+}
