@@ -1,0 +1,82 @@
+package logica_programacao;
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		double impostoC = 62.59, impostoE = 56.86, impostoV = 61.58,
+				lucroC = 0.30, lucroE = 0.35, lucroV = 0.50, precoUnitario = 0;
+		int quantidadeC = 0, quantidadeE = 0, quantidadeV = 0, total = 0;
+		char C , E, V;
+		String produto;
+		
+		//lucroC = (precoUnitario * impostoC) - (precoUnitario - impostoC) * lucroC;
+		//lucroE = precoUnitario * lucroE - impostoE;
+		//lucroV = precoUnitario * lucroV - impostoV;
+		
+		do {
+		
+		System.out.print("Informe a categoria do produto\n[C] - [Cama, mesa e banho] | "
+				+ "[E] - Eletrodomésticos | [V] - Vestuário: ");
+		char categoria = sc.next().charAt(0);
+		categoria = Character.toUpperCase(categoria);
+		
+		if(categoria == 'C') {
+			quantidadeC++;
+		}
+		
+		else if(categoria == 'E') {
+			quantidadeE++;
+		}
+		else if (categoria == 'V'){
+			quantidadeV++;
+		}
+		else {
+			System.out.println("Digitar uma categoria válida: ");
+		}
+		
+		System.out.print("Informe o produto a ser registrado: ");
+		produto = sc.next();
+		
+		System.out.print("Informe o valor unitário do produto: ");
+		precoUnitario = sc.nextDouble();
+		
+		if(categoria == 'C') {
+			impostoC = precoUnitario * (37.41 / 100);
+			lucroC =  (precoUnitario - impostoC) * 0.3;
+			System.out.printf("O valor de imposto do produto é de %.1f", impostoC);
+			System.out.printf("\nA margem de lucro do produto é de  %.1f\n", lucroC);
+			
+			
+		}
+		else if(categoria == 'E') {
+			impostoE = precoUnitario * (43.14 / 100);
+			lucroE =  (precoUnitario - impostoE * 0.35;
+			System.out.printf("O valor de imposto do produto é de %.1f", impostoE);
+			System.out.printf("\nA margem de lucro do produto é de  %.1f\n", lucroE);
+			
+		}
+		else if (categoria == 'V') {
+			impostoV = precoUnitario * (38.14 / 100);
+			lucroV =  (precoUnitario - impostoV * 0.5;
+			System.out.printf("O valor de imposto do produto é de %.1f", impostoV);
+			System.out.printf("\nA margem de lucro do produto é de  %.1f\n", lucroV);
+			
+		}
+		else {
+			System.out.println("Não foi possível calcular os valores dos produtos: ");
+		}
+		
+		if(total > 14) {
+			System.out.println("Limite de registro de produtos atingido: ");
+		}
+		
+		} while(total <= 14);
+			
+	
+	    sc.close();
+	}
+}

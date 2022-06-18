@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		
+		double valorUnitario, imposto;
+		int produtos, categoria;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Qual produto deseja cadastrar: ");
+		produtos = sc.nextInt();
+		
+		System.out.println("Este produto pertence a qual categoria: ");
+		categoria = sc.nextInt();
+				
+		
+		sc.close();
+	}
+
+}

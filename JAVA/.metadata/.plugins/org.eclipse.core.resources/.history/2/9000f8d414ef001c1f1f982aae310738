@@ -1,0 +1,25 @@
+package logica_programacao;
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		double impostoC = 62.59, impostoE = 56.86, impostoV = 61.58,
+				lucroC = 0.30, lucroE = 0.35, lucroV = 0.50, precoUnitario;
+		int quantidade;
+		char C, E, V;
+		
+		lucroC = precoUnitario * lucroC - impostoC;
+		lucroE = precoUnitario * lucroE - impostoE;
+		lucroV = precoUnitario * lucroV - impostoV;
+
+		System.out.print("Informe a categoria do produto ([C] - [Cama, mesa e banho] /n "
+				+ "[E] - Eletrodomésticos /n [V] - Vestuário /n: ");
+		char categoria = sc.next().charAt(0);
+			
+	    sc.close();
+	}
+}

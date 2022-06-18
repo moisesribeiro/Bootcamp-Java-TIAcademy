@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		
+		int totalProdutos;
+		double valorUnitario, imposto, lucro, valorCategoriaC, valorCategoriaE, valorCategoriaV;
+		
+		for(int i = 0; i < totalProdutos; i++) {
+			totalProdutos = totalProdutos + 1;
+			if(totalProdutos > 15) {
+			System.out.printf("Você não pode cadastrar mais produtos, o limite de %d");
+			}
+			else{
+				System.out.println("Qual produto deseja cadastrar: ");
+				Scanner sc = new Scanner(System.in);
+				sc.close();
+			}
+		}
+
+		
+	}
+
+}

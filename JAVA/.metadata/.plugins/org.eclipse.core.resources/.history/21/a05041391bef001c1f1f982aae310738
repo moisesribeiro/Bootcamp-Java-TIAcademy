@@ -1,0 +1,54 @@
+package logica_programacao;
+import java.util.Scanner;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		double impostoC = 62.59, impostoE = 56.86, impostoV = 61.58,
+				lucroC = 0.30, lucroE = 0.35, lucroV = 0.50, precoUnitario = 0;
+		int quantidadeC, quantidadeE, quantidadeV;
+		char C , E, V;
+		String produto;
+		
+		lucroC = precoUnitario * lucroC - impostoC;
+		lucroE = precoUnitario * lucroE - impostoE;
+		lucroV = precoUnitario * lucroV - impostoV;
+		
+		do {
+		
+		System.out.print("Informe a categoria do produto\n[C] - [Cama, mesa e banho] | "
+				+ "[E] - Eletrodomésticos | [V] - Vestuário: ");
+		char categoria = sc.next().charAt(0);
+		categoria = Character.toUpperCase(categoria);
+		
+		if(categoria == 'C') {
+			quantidadeC++;
+		}
+		
+		else if(categoria == E) {
+			quantidadeE++;
+		}
+		else{
+			quantidadeV++;
+		}
+		
+		System.out.print("Informe o produto a ser registrado: ");
+		produto = sc.nextLine();
+		
+		System.out.print("Informe o valor unitário do produto: ");
+		precoUnitario = sc.nextDouble();
+		
+		if(quantidade > 14) {
+			System.out.println("Limite de registro de produtos atingido: ");
+		}
+		
+		} while(quantidade <= 14);
+			
+		
+			
+	    sc.close();
+	}
+}
